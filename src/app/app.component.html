@@ -1,0 +1,37 @@
+<div>
+  Hello 
+  <button (click)="callService()">GetAllUsers</button>
+  <div *ngIf='status'>
+  <table border="1" style="width: 33%">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+    </tr>
+    <tr *ngFor="let u of users">
+      <td>{{ u.id }}</td>
+      <td>{{ u.name }}</td>
+      <td>{{ u.username }}</td>
+      <td>{{ u.email }}</td>
+    </tr>
+  </table>
+</div>
+<div>
+<input type="text" [(ngModel)]="term" placeholder="--Username--"/>
+<button (click)="callMusicService()">GetAllMusic</button>
+<table border="1" style="width: 33%">
+  <tr>
+    <th>Name</th>
+    <th>Artist</th>
+    
+  </tr>
+  <tr *ngFor="let m of music">
+    <td>{{ m.name }}</td>
+    <td>{{ m.artist }}</td>
+   
+  </tr>
+</table>
+
+</div>
+</div>
